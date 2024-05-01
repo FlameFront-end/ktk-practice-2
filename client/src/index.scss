@@ -2,23 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
 
-:root {
-  color: rgb(255 255 255 / 87%);
-  font-weight: 400;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #242424;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: black;
 }
 
 a {
-  color: #646cff;
+  color: blue;
   font-weight: 500;
   text-decoration: inherit;
 }
@@ -32,12 +21,16 @@ h1 {
   line-height: 1.1;
 }
 
+.go167266335{
+  color: white !important;
+}
+
 button {
   padding: 0.6em 1.2em;
   font-weight: 500;
   font-size: 1em;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f9f9f9;
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
@@ -45,7 +38,7 @@ button {
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: blueviolet;
 }
 
 button:focus,

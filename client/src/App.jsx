@@ -1,8 +1,5 @@
 import AppRoutes from './routes/AppRoutes.jsx'
-import './App.scss'
 import { SnackbarProvider } from 'notistack'
-import { BrowserRouter } from 'react-router-dom'
-import React from 'react'
 
 function App() {
 	return (

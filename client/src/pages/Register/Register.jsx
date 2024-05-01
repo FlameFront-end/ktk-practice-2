@@ -90,9 +90,6 @@ const Register = () => {
 	return (
 		<LayoutCenter>
 			<div className={s.wrapper}>
-				<div className={s.left}>
-					<img src={image} alt='' />
-				</div>
 				<form onSubmit={handleSubmit} className={s.right}>
 					<h3 className={s.title}>Регистрация аккаунта</h3>
 					<div className={s.row}>
