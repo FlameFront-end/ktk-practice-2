@@ -1,13 +1,9 @@
-import image from '../../assets/registration-form-1.webp'
+import image from '../../assets/registration-form-1.jpg'
 import s from './Login.module.scss'
 import { Input } from '../../components'
 import LayoutCenter from '../../layouts/LayoutCenter/LayoutCenter.jsx'
 import { useState } from 'react'
-import {
-	handleSuccessLogin,
-	showErrorSnackbar,
-	showSuccessSnackbar
-} from '../../utils'
+import { showErrorSnackbar } from '../../utils'
 
 const Login = () => {
 	const [data, setData] = useState({

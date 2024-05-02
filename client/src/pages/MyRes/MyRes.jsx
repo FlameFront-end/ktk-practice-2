@@ -6,9 +6,9 @@ const MyRes = () => {
 	const getClassName = (status) => {
 		switch (status) {
 			case 'Принято':
-				return 'green'
+				return s.green
 			case 'Отказ':
-				return 'red'
+				return s.red
 			default:
 				return ''
 		}
@@ -17,18 +17,20 @@ const MyRes = () => {
 	return (
 		<MainLayout>
 			<div className={s.wrapper}>
-				<h2>Мои заявки</h2>
+				<h2 className={s.title}>Мои заявки</h2>
 				<ul className={s.list}>
 					{allRes.map((item) => (
 						<li key={item.id} className={s.item}>
-							<img src={item.image} alt={item.name} />
+							<img src={item.image} alt={item.name} className={s.image} />
 							<div className={s.text}>
-								<h3>{item.name}</h3>
+								<h3 className={s.name}>{item.name}</h3>
 								<p>Порода: {item.breed}</p>
 								<p>Пол: {item.gender}</p>
 								<p>Расцветка: {item.color}</p>
 								<p>Дополнительная атрибутика: {item.attributes.join(', ')}</p>
-								<p className={getClassName(item.status)}>{item.status}</p>
+								<p className={`${s.status} ${getClassName(item.status)}`}>
+									{item.status}
+								</p>
 							</div>
 						</li>
 					))}

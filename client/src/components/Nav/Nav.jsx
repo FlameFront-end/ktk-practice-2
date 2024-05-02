@@ -17,7 +17,6 @@ const Nav = ({ handleMenu }) => {
 				<button onClick={handleMenu}>
 					<span className={s.line}></span>
 					<span className={s.line}></span>
-					<span className={s.line}></span>
 				</button>
 			</nav>
 		</>

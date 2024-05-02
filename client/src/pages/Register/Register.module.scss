@@ -3,21 +3,35 @@
   gap: 100px;
   align-items: center;
   min-height: 100%;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 20px;
+
+    .right,
+    .left {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 956px) {
+    gap: 40px;
+  }
 }
 
 .right {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  width: 50%;
 
   .row {
     display: flex;
     gap: 20px;
     width: 100%;
 
-    @media screen and (max-width: 600px) {
-      width: 100%;
+    @media screen and (max-width: 1100px) {
       flex-direction: column;
       gap: 20px;
     }

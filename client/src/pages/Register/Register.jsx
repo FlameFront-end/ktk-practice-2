@@ -1,13 +1,9 @@
-import image from '../../assets/registration-form-1.webp'
+import image from '../../assets/registration-form-1.jpg'
 import s from './Register.module.scss'
 import { Input } from '../../components'
 import LayoutCenter from '../../layouts/LayoutCenter/LayoutCenter.jsx'
 import { useState } from 'react'
-import {
-	handleSuccessLogin,
-	showErrorSnackbar,
-	showSuccessSnackbar
-} from '../../utils'
+import { showErrorSnackbar } from '../../utils'
 
 const Register = () => {
 	const [data, setData] = useState({
@@ -65,16 +61,6 @@ const Register = () => {
 					message: 'Пароль не указан'
 				})
 			}
-
-			// await Api.auth
-			// 	.login(data)
-			// 	.then((res) => {
-			// 		showSuccessSnackbar('Успешный вход в аккаунт')
-			// 		handleSuccessLogin(res)
-			// 	})
-			// 	.catch(() => {
-			// 		showErrorSnackbar({ message: 'Что-то пошло не так' })
-			// 	})
 		} catch (err) {
 			showErrorSnackbar({ message: 'Что-то пошло не так' })
 			console.error(err)
@@ -90,6 +76,9 @@ const Register = () => {
 	return (
 		<LayoutCenter>
 			<div className={s.wrapper}>
+				<div className={s.left}>
+					<img src={image} alt='' />
+				</div>
 				<form onSubmit={handleSubmit} className={s.right}>
 					<h3 className={s.title}>Регистрация аккаунта</h3>
 					<div className={s.row}>

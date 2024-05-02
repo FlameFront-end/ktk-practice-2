@@ -1,60 +1,78 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+
+  .title {
+    margin-bottom: 30px;
+  }
 
   .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: start;
-    margin-top: 20px;
     list-style: none;
-
-    //width: 500px;
+    padding: 0;
 
     .item {
       display: flex;
-      gap: 20px;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
-      padding-bottom: 20px;
-      border-bottom: 2px solid white;
+      padding: 20px;
+      border: 2px solid #ddd;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-      @media (max-width: 600px) {
+      @media screen and (max-width: 600px){
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 20px;
       }
-
-      .text {
+      .product {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+
+        .image {
+          max-width: 150px;
+          margin-right: 20px;
+        }
+
+        .text {
+          text-align: left;
+
+          .name {
+            margin-bottom: 5px;
+          }
+        }
       }
 
-      img {
-        max-width: 200px;
-      }
+      .delete {
+        background-color: #ff4d4f;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
-      &:last-child {
-        border-bottom: none;
+        &:hover {
+          background-color: #f5222d;
+        }
       }
     }
   }
 
   .btn {
-    margin: 0 auto;
-    margin-top: 30px;
-  }
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 
-  .delete {
-    width: max-content;
-    height: max-content;
+    &:hover {
+      background-color: #40a9ff;
+    }
   }
 
   .empty {
     color: red;
-    font-size: 30px;
+    font-size: 24px;
+    margin-top: 30px;
   }
 }
